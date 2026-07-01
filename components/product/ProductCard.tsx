@@ -7,7 +7,7 @@ export default function ProductCard({ product }: { product: Product }) {
     return (
         <li className="p-4">
             <Link href={`/products/${product.id}`}>
-                <div className="relative w-full aspect-square overflow-hidden rounded-md shadow-md bg-neutral-100">
+                <div className="relative w-full aspect-square overflow-hidden rounded-md shadow-md bg-neutral-100 hover:scale-105 transition-transform">
                     <Image
                         src={product.image}
                         alt={product.title}

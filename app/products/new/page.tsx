@@ -1,19 +1,14 @@
-import AddProductForm from "@/components/product/AddProductForm";
-import {Metadata} from "next";
-import Link from "next/link";
-
-
-export const metadata: Metadata = {
-    title: "New Product",
-    description: "Create a new product",
-}
+import AddProductForm from "@/components/product/AddProductForm"; 
+// Եթե այն անվանական (named) ես էքսպորտ արել, ապա՝ import { AddProductForm } ...
 
 export default function NewProductPage() {
-    return (
-        <div className="container mx-auto min-h-screen">
-            <h1>New Product</h1>
-            <Link href="/products">Back to Products</Link>
-            <AddProductForm />
-        </div>
-    )
+  return (
+    // bg-gray-50-ը տալիս է հաճելի բաց մոխրագույն ֆոն
+    // py-12-ը վերևից տարածություն է բացում, որ ֆորման չկպչի նավիգացիային
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4">
+        <AddProductForm />
+      </div>
+    </div>
+  );
 }
